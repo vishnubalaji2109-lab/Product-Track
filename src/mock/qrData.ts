@@ -1,0 +1,161 @@
+import { SubmittedResultItem } from '../types/results';
+
+export interface CatalogProduct {
+  qrCode: string;
+  productName: string;
+  productCode: string;
+  category: string;
+  batchNumber: string;
+  manufacturer: string;
+}
+
+export const mockCatalogProducts: CatalogProduct[] = [
+  {
+    qrCode: 'QR123456',
+    productName: 'Product A - Eco Smart Sensor',
+    productCode: 'PRD-001',
+    category: 'Sensors',
+    batchNumber: 'BATCH-2026-X01',
+    manufacturer: 'Apex Electronics Ltd',
+  },
+  {
+    qrCode: 'QR789012',
+    productName: 'Product B - Industrial Gateway Pro',
+    productCode: 'PRD-002',
+    category: 'Gateways',
+    batchNumber: 'BATCH-2026-G88',
+    manufacturer: 'Apex Electronics Ltd',
+  },
+  {
+    qrCode: 'QR345678',
+    productName: 'Product C - Ultra Beacon TX',
+    productCode: 'PRD-003',
+    category: 'Transmitters',
+    batchNumber: 'BATCH-2026-B12',
+    manufacturer: 'OmniCom Global',
+  },
+  {
+    qrCode: 'QR901234',
+    productName: 'Product D - Optic Reader V2',
+    productCode: 'PRD-004',
+    category: 'Scanners',
+    batchNumber: 'BATCH-2026-O44',
+    manufacturer: 'Spectra Vision Corp',
+  },
+  {
+    qrCode: 'QR567890',
+    productName: 'Product E - Thermal Controller X',
+    productCode: 'PRD-005',
+    category: 'Thermals',
+    batchNumber: 'BATCH-2026-T90',
+    manufacturer: 'Calor Tech Systems',
+  },
+];
+
+export const initialSubmittedResults: SubmittedResultItem[] = [
+  {
+    id: 'scan-001',
+    sNo: 1,
+    qrCode: 'QR123456',
+    productName: 'Product A - Eco Smart Sensor',
+    productCode: 'PRD-001',
+    location: {
+      latitude: 19.076,
+      longitude: 72.8777,
+      accuracy: 12,
+      timestamp: '2026-09-09T14:30:00.000Z',
+    },
+    scannedAt: '2026-09-09T14:30:00.000Z',
+    scannedDate: '09-Sep-2026',
+    scannedTime: '08:00 PM',
+    status: 'Success',
+    message: 'Product identity verified against central manifest',
+    batchNumber: 'BATCH-2026-X01',
+    manufacturer: 'Apex Electronics Ltd',
+    submittedBy: 'admin@example.com',
+  },
+  {
+    id: 'scan-002',
+    sNo: 2,
+    qrCode: 'QR789012',
+    productName: 'Product B - Industrial Gateway Pro',
+    productCode: 'PRD-002',
+    location: {
+      latitude: 12.9716,
+      longitude: 77.5946,
+      accuracy: 15,
+      timestamp: '2026-09-10T09:15:00.000Z',
+    },
+    scannedAt: '2026-09-10T09:15:00.000Z',
+    scannedDate: '10-Sep-2026',
+    scannedTime: '02:45 PM',
+    status: 'Verified',
+    message: 'Warehouse transit scan approved and logged',
+    batchNumber: 'BATCH-2026-G88',
+    manufacturer: 'Apex Electronics Ltd',
+    submittedBy: 'admin@example.com',
+  },
+  {
+    id: 'scan-003',
+    sNo: 3,
+    qrCode: 'QR345678',
+    productName: 'Product C - Ultra Beacon TX',
+    productCode: 'PRD-003',
+    location: {
+      latitude: 28.6139,
+      longitude: 77.209,
+      accuracy: 8,
+      timestamp: '2026-09-08T11:45:00.000Z',
+    },
+    scannedAt: '2026-09-08T11:45:00.000Z',
+    scannedDate: '08-Sep-2026',
+    scannedTime: '05:15 PM',
+    status: 'Success',
+    message: 'Delivery arrival checklist cleared',
+    batchNumber: 'BATCH-2026-B12',
+    manufacturer: 'OmniCom Global',
+    submittedBy: 'manager@example.com',
+  },
+  {
+    id: 'scan-004',
+    sNo: 4,
+    qrCode: 'QR901234',
+    productName: 'Product D - Optic Reader V2',
+    productCode: 'PRD-004',
+    location: {
+      latitude: 13.0827,
+      longitude: 80.2707,
+      accuracy: 20,
+      timestamp: '2026-09-07T16:20:00.000Z',
+    },
+    scannedAt: '2026-09-07T16:20:00.000Z',
+    scannedDate: '07-Sep-2026',
+    scannedTime: '09:50 PM',
+    status: 'Flagged',
+    message: 'Location variance exceeded 500m threshold; supervisor flagged for review',
+    batchNumber: 'BATCH-2026-O44',
+    manufacturer: 'Spectra Vision Corp',
+    submittedBy: 'operator1@example.com',
+  },
+  {
+    id: 'scan-005',
+    sNo: 5,
+    qrCode: 'QR567890',
+    productName: 'Product E - Thermal Controller X',
+    productCode: 'PRD-005',
+    location: {
+      latitude: 17.385,
+      longitude: 78.4867,
+      accuracy: 10,
+      timestamp: '2026-09-06T10:00:00.000Z',
+    },
+    scannedAt: '2026-09-06T10:00:00.000Z',
+    scannedDate: '06-Sep-2026',
+    scannedTime: '03:30 PM',
+    status: 'Verified',
+    message: 'Quality check completed at distribution hub',
+    batchNumber: 'BATCH-2026-T90',
+    manufacturer: 'Calor Tech Systems',
+    submittedBy: 'admin@example.com',
+  },
+];

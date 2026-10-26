@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+node_modules/
+node_modules*.zip
+src.zip
+public.zip
+server.zip
+dist/
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
